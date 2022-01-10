@@ -10,7 +10,7 @@ import UIKit
 
 class CalculatorView: UIView {
     let titleLabel: UILabel = UILabel()
-    let button1: UIButton = UIButton()
+    var buttonAC: UIButton = UIButton()
     var numButtons: [UIButton] = []
     var otherButtons: [UIButton] = []
     let otherButtonsTitle: [String] = ["=", "+", "-", "*", "/"]
@@ -37,8 +37,12 @@ class CalculatorView: UIView {
             self.otherButtons.append(self.makeButton(title: otherButtonsTitle[i], color: .magenta))
             otherButtons[i].translatesAutoresizingMaskIntoConstraints = false
             addSubview(self.otherButtons[i])
-            
         }
+        
+        //Botão AC
+        self.buttonAC = self.makeButton(title: "AC", color: .magenta)
+        buttonAC.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(self.buttonAC)
         
         // Label Calculadora
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -54,12 +58,12 @@ class CalculatorView: UIView {
         operationDisplay.font = operationDisplay.font.withSize(20)
         addSubview(operationDisplay)
         numADisplay.translatesAutoresizingMaskIntoConstraints = false
-        numADisplay.text = "0"
+        numADisplay.text = "numA"
         numADisplay.textColor = .white
         numADisplay.font = numADisplay.font.withSize(20)
         addSubview(numADisplay)
         numBDisplay.translatesAutoresizingMaskIntoConstraints = false
-        numBDisplay.text = "B"
+        numBDisplay.text = "numB"
         numBDisplay.textColor = .white
         numBDisplay.font = numBDisplay.font.withSize(20)
         addSubview(numBDisplay)
@@ -113,6 +117,9 @@ class CalculatorView: UIView {
             
             numButtons[0].centerXAnchor.constraint(equalTo: numButtons[1].centerXAnchor),
             numButtons[0].centerYAnchor.constraint(equalTo: numButtons[1].centerYAnchor,constant: 50),
+            buttonAC.centerXAnchor.constraint(equalTo: centerXAnchor),
+            buttonAC.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 50),
+
             
             otherButtons[0].centerXAnchor.constraint(equalTo: numButtons[3].centerXAnchor),
             otherButtons[0].centerYAnchor.constraint(equalTo: numButtons[0].centerYAnchor),
@@ -125,9 +132,12 @@ class CalculatorView: UIView {
             otherButtons[3].centerYAnchor.constraint(equalTo: otherButtons[2].centerYAnchor),
             otherButtons[4].centerXAnchor.constraint(equalTo: otherButtons[3].centerXAnchor, constant: 50),
             otherButtons[4].centerYAnchor.constraint(equalTo: otherButtons[2].centerYAnchor),
-            
+
+
+
             resultDisplay.topAnchor.constraint(equalTo: otherButtons[4].topAnchor, constant: 70),
             resultDisplay.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
             
         ])
     }
