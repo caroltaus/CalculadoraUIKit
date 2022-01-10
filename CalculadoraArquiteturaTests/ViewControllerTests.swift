@@ -58,6 +58,7 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.numA, nil)
         XCTAssertEqual(sut.numB, nil)
         XCTAssertEqual(sut.oper, nil)
+        XCTAssertEqual(sut.opResult, nil)
     }
     
     func testSumOperation() {
