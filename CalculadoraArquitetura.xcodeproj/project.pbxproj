@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C817805D278CC3AB00F29509 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C817805C278CC3AB00F29509 /* SnapshotTesting */; };
+		C817805F278CC41500F29509 /* CalculatorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817805E278CC41500F29509 /* CalculatorViewTests.swift */; };
 		C82BC2CA27875A58000287EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2C927875A58000287EA /* AppDelegate.swift */; };
 		C82BC2CC27875A58000287EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2CB27875A58000287EA /* SceneDelegate.swift */; };
 		C82BC2CE27875A58000287EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2CD27875A58000287EA /* ViewController.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C817805E278CC41500F29509 /* CalculatorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewTests.swift; sourceTree = "<group>"; };
 		C82BC2C627875A58000287EA /* CalculadoraArquitetura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraArquitetura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82BC2C927875A58000287EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C82BC2CB27875A58000287EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C817805D278CC3AB00F29509 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C82BC2E027875A5A000287EA /* ViewControllerTests.swift */,
+				C817805E278CC41500F29509 /* CalculatorViewTests.swift */,
 			);
 			path = CalculadoraArquiteturaTests;
 			sourceTree = "<group>";
@@ -180,6 +185,9 @@
 				C82BC2DE27875A5A000287EA /* PBXTargetDependency */,
 			);
 			name = CalculadoraArquiteturaTests;
+			packageProductDependencies = (
+				C817805C278CC3AB00F29509 /* SnapshotTesting */,
+			);
 			productName = CalculadoraArquiteturaTests;
 			productReference = C82BC2DC27875A5A000287EA /* CalculadoraArquiteturaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -234,6 +242,9 @@
 				Base,
 			);
 			mainGroup = C82BC2BD27875A58000287EA;
+			packageReferences = (
+				C817805B278CC3AB00F29509 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = C82BC2C727875A58000287EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C817805F278CC41500F29509 /* CalculatorViewTests.swift in Sources */,
 				C82BC2E127875A5A000287EA /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +628,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C817805B278CC3AB00F29509 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C817805C278CC3AB00F29509 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C817805B278CC3AB00F29509 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C82BC2BE27875A58000287EA /* Project object */;
 }
