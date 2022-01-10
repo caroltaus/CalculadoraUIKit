@@ -12,7 +12,7 @@
 		C82BC2CE27875A58000287EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2CD27875A58000287EA /* ViewController.swift */; };
 		C82BC2D327875A5A000287EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82BC2D227875A5A000287EA /* Assets.xcassets */; };
 		C82BC2D627875A5A000287EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82BC2D427875A5A000287EA /* LaunchScreen.storyboard */; };
-		C82BC2E127875A5A000287EA /* CalculadoraArquiteturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2E027875A5A000287EA /* CalculadoraArquiteturaTests.swift */; };
+		C82BC2E127875A5A000287EA /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2E027875A5A000287EA /* ViewControllerTests.swift */; };
 		C82BC2EB27875A5A000287EA /* CalculadoraArquiteturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2EA27875A5A000287EA /* CalculadoraArquiteturaUITests.swift */; };
 		C82BC2ED27875A5A000287EA /* CalculadoraArquiteturaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2EC27875A5A000287EA /* CalculadoraArquiteturaUITestsLaunchTests.swift */; };
 		C82BC2FB27875CDF000287EA /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BC2FA27875CDF000287EA /* CalculatorView.swift */; };
@@ -45,7 +45,7 @@
 		C82BC2D527875A5A000287EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82BC2D727875A5A000287EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C82BC2DC27875A5A000287EA /* CalculadoraArquiteturaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculadoraArquiteturaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C82BC2E027875A5A000287EA /* CalculadoraArquiteturaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraArquiteturaTests.swift; sourceTree = "<group>"; };
+		C82BC2E027875A5A000287EA /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		C82BC2E627875A5A000287EA /* CalculadoraArquiteturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculadoraArquiteturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82BC2EA27875A5A000287EA /* CalculadoraArquiteturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraArquiteturaUITests.swift; sourceTree = "<group>"; };
 		C82BC2EC27875A5A000287EA /* CalculadoraArquiteturaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraArquiteturaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		C82BC2DF27875A5A000287EA /* CalculadoraArquiteturaTests */ = {
 			isa = PBXGroup;
 			children = (
-				C82BC2E027875A5A000287EA /* CalculadoraArquiteturaTests.swift */,
+				C82BC2E027875A5A000287EA /* ViewControllerTests.swift */,
 			);
 			path = CalculadoraArquiteturaTests;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82BC2E127875A5A000287EA /* CalculadoraArquiteturaTests.swift in Sources */,
+				C82BC2E127875A5A000287EA /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +456,7 @@
 				INFOPLIST_FILE = CalculadoraArquitetura/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,6 +484,7 @@
 				INFOPLIST_FILE = CalculadoraArquitetura/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -24,6 +24,11 @@ class ViewController: UIViewController {
             contentView.operationDisplay.text = "\(oper ?? "OP")"
         }
     }
+    var opResult: String?{
+        didSet {
+            contentView.resultDisplay.text = "\(opResult ?? "Resultado")"
+        }
+    }
     var calc: CalculatorLogic = CalculatorLogic()
     var contentView: CalculatorView = CalculatorView()
     
@@ -37,7 +42,7 @@ class ViewController: UIViewController {
         setupActions()
     }
     
-    private func tapNumber(num: Int) {
+    func tapNumber(num: Int) {
         if let op = oper { // se ja tem algo em oper, é o segundo num
             
             if let numB = numB { // se numB nao ta nil
@@ -59,7 +64,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func tapOperation(op: String) {
+    func tapOperation(op: String) {
         if (op != "=") {
             oper = op
         }
@@ -71,19 +76,29 @@ class ViewController: UIViewController {
         if (op == "=") {
             
             if (oper == "+") {
-                contentView.resultDisplay.text = "\(calc.sum(numA, numB))"
+//                contentView.resultDisplay.text = "\(calc.sum(numA, numB))"
+                opResult = "\(calc.sum(numA, numB))"
                 clean()
             }
             if (oper == "-") {
-                contentView.resultDisplay.text = "\(calc.sub(numA, numB))"
+//                contentView.resultDisplay.text = "\(calc.sub(numA, numB))"
+                opResult = "\(calc.sub(numA, numB))"
                 clean()
             }
             if (oper == "*") {
-                contentView.resultDisplay.text = "\(calc.mult(numA, numB))"
+//                contentView.resultDisplay.text = "\(calc.mult(numA, numB))"
+                opResult = "\(calc.mult(numA, numB))"
                 clean()
             }
             if (oper == "/") {
-                contentView.resultDisplay.text = "\(calc.div(numA, numB))"
+//                contentView.resultDisplay.text = "\(calc.div(numA, numB))"
+                if numB == 0 {
+                    opResult = "ERRO"
+                }
+                else {
+                    opResult = "\(calc.div(numA, numB))"
+                }
+                
                 clean()
             }
         }
@@ -104,15 +119,27 @@ class ViewController: UIViewController {
                 
             }), for: .touchUpInside)
         }
+        
+        contentView.buttonAC.addAction(UIAction(handler: { handler in
+            self.tapAC()
+            
+        }), for: .touchUpInside)
+    }
+    
+    func tapAC() {
+        clean()
+        opResult = nil
     }
     
     private func clean() {
         numA = nil
         numB = nil
         oper = nil
+        
         contentView.numADisplay.text = "numA"
         contentView.numBDisplay.text = "numB"
         contentView.operationDisplay.text = "OP"
+        
     }
 }
 
